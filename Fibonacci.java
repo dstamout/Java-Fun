@@ -23,8 +23,27 @@ public class Fibonacci {
             }
         }
 
-        
+        System.out.println("\nYou chose option " + input + ".");
 
+        if (input == 1) {
+            while (true) {
+                try {
+                    System.out.println("\nWhat number would you like to try? Must be positive. ");
+                    input = Integer.parseInt(reader.nextLine());
+                    if (input < 0)
+                        throw new IllegalArgumentException("");
+                    break;
+                }
+                catch (Exception e) {
+                    System.out.println("Invalid input. Not in bounds or is not a number. Please enter a valid input.");
+                }
+            }
+
+            displayFib(input);
+        }
+
+        // Closing remarks
+        System.out.println("\nThanks for playing! Hope you found this cool!");
         reader.close();
     }
 
