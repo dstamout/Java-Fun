@@ -1,5 +1,5 @@
 // This is a random compilation of things to do with fibonacci. This is not meant to be useful
-
+// Scanner import
 import java.util.Scanner;
 
 public class Fibonacci {
@@ -27,7 +27,7 @@ public class Fibonacci {
             }
             // Exception output
             catch (Exception e) {
-                System.out.println("Invalid initInput. Not in bounds or is not a number. Please enter a valid initInput.");
+                System.out.println("Invalid input. Not in bounds or is not a number. Please enter a valid input.");
             }
         }
         System.out.println("\nYou chose option " + initInput + ".");
@@ -43,17 +43,19 @@ public class Fibonacci {
                     break;
                 }
                 catch (Exception e) {
-                    System.out.println("Invalid input. Not in bounds or is not a number. Please enter a valid initInput.");
+                    System.out.println("Invalid input. Not in bounds or is not a number. Please enter a valid input.");
                 }
             }
 
+            // Perform fib nums
             if (initInput == 1)
                 displayFibNums(num);
+            // Perform fib terms
             if (initInput == 2)
                 displayFibTerms(num);
         }
 
-        // Closing remarks
+        // Closing message and reader close
         System.out.println("\nThanks for playing! Hope you found this cool!");
         reader.close();
     }
